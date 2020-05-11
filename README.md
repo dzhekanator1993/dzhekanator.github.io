@@ -1,2 +1,2 @@
-# dzhekanator.github.io
-MyResume
+# Deshevyi Eugenyi
+My first CV
