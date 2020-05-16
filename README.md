@@ -2,6 +2,8 @@
 My projects
 
 
-[MyCV](https://dzhekanator1993.github.io/dzhekanator.github.io/CV/ "MyFirstCV")
+[MyCV](https://dzhekanator1993.github.io/dzhekanator.github.io/CV/ "MyCV")
+
+[MyHTML](https://dzhekanator1993.github.io/dzhekanator.github.io/MyFirstHTML/ "MyFirstHTML")
 
 [MyTetris](https://dzhekanator1993.github.io/dzhekanator.github.io/tetris/ "MyFirstJSProject")
