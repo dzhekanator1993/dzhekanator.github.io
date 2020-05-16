@@ -1,5 +1,5 @@
 # Deshevyi Eugenyi
-My first CV
+My projects
 
 
 [MyCV](https://dzhekanator1993.github.io/dzhekanator.github.io/CV/ "MyFirstCV")
