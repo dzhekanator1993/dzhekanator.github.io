@@ -6,29 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.ico">
     <title>Автоматезированная штукатурка стен</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <main class="main ">
     <div class="container">
+
         <div class="header">
-
             <div class="row">
-
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
                     <div class="logo">
                         <img src="img/logo1.png" alt="logo.Гипсолит.Штукатурка стен">
                     </div>
                 </div>
 
-                <div class="col-md-2 offset-md-4">
+                <div class="col-xl-3 offset-xl-3 col-lg-4 offset-lg-2 col-md-4 offset-0 col-sm-12">
                     <div class="phone-block">
-                        <a class="phone-link" href="#">+7 918 839 29 95</a>
+                        <a class="phone-link" href="#">+38(096)173-75-28</a>
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
                     <div class="wrap">
                         <div class="wrap-block">
                             <button class="button header-btn">Получить консультацию</button>
@@ -36,12 +35,11 @@
                     </div>
                 </div>
             </div>
-            
         </div>
-
+  
         <div class="main-content">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-xl-6 col-lg-7">
                     <div class="main-title">
                     <h1>АВТОМАТИЗИРОВАННАЯ ШТУКАТУРКА СТЕН</h1>
                     <p class="main-subtitle">Идеально ровные стены <br> в кратчайшие сроки</p>
@@ -49,7 +47,7 @@
                     <strong class="main-trigger">ОПЛАТА ПО ФАКТУ!</strong>    
                     </div>
                 </div>
-                <div class="col-md-4 offset-md-2">
+                <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-0 col-md-8 offset-md-2">
                     <div class="main-form">
                         <h2 class="main-form-header ">Для расчёта точной стоимости<br>закажите <strong>выезд замерщика</strong></h2>
                         <form action="#">
@@ -66,6 +64,101 @@
         </div>
     </div>
 </main>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-header">
+            Преимущество работы с нами
+        </h2>
+        <div class="features-slider">
+            <div class="features-block">
+                <div class="features-img">
+                    <picture>
+                        <source srcset="img/features/coin.svg" type="image/">
+                        <img src="img/features/coin.png" alt="Платите по факту">
+                    </picture>
+                </div>
+                <h3>Платите по факту</h3>
+                <p>Вы оплачиваете выполненные  работы только после их выполнения. <br>Никаких скрытых оплат и промежуточных платежей.</p>
+            </div>
+            <div class="features-block">
+                <div class="features-img">
+                    <picture>
+                        <source srcset="img/features/folder.svg" type="image/">
+                        <img src="img/features/folder.png" alt="Заключаем договор">
+                    </picture>
+                </div>
+                <h3>Заключаем договор</h3>
+                <p>Перед началом работ заключаем договор на юридическое лицо. <br> Вы можете быть уверены, что все обязательства будут выполнены.</p>
+            </div>
+            <div class="features-block">
+                <div class="features-img">
+                    <picture>
+                        <source srcset="img/features/clock.svg" type="image/">
+                        <img src="img/features/clock.png" alt="Точно в срок">
+                    </picture>
+                </div>
+                <h3>Точно в срок</h3>
+                <p>Работаем строго по установленным срокам, которые прописаны  в договоре. <br>Если не успеваем вы платите меньше.</p>
+            </div>
+            <div class="features-block">
+                <div class="features-img">
+                    <picture>
+                        <source srcset="img/features/bank.svg" type="image/">
+                        <img src="img/features/bank.png" alt="Экономите на материалах">
+                    </picture>
+                </div>
+                <h3>Экономите на материалах</h3>
+                <p>Мы являемся структурным подразделением компании поставщика строительных смесей gicema.ru и даем вам самые выгодные цены.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+
+  <!-- Подключаем стили slick slider -->
+  <link rel="stylesheet" href="slick/slick/slick.css">
+  <link rel="stylesheet" href="slick/slick/slick-theme.css">
+  <!-- Подключаем библиотеку slick slider -->
+  <script src="slick/slick/slick.min.js"></script>
+  <!-- <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> -->
+   
+  <!-- Инициализируем slider-->
+    <script>
+        $(document).ready(function(){
+            $('.features-slider').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 992,
+                    settings: {
+                        prevArrow: '<button class="prev arrow"></button>',
+                        nextArrow: '<button class="next arrow"></button>',
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                    },
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: '<button class="prev arrow"></button>',
+                        nextArrow: '<button class="next arrow"></button>',
+                    }
+                    }
+                ]
+            });
+        });
+    </script>
+
 </body>
 </html>
