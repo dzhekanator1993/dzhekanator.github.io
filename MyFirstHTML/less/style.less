@@ -43,7 +43,15 @@ html{
     font-size: 10px;
 }
 body{
-    .reg;
+    .reg();
+}
+a:hover{
+    text-decoration: none;
+}
+button, input, a {
+    &:focus{
+        outline: none;
+    }
 }
 .button{
     padding: 1rem 3rem;
@@ -52,23 +60,35 @@ body{
     background-color: @btn-color;
     color: @light;
     text-transform: uppercase;
-     border: none;
-
+    border: none;
+    transition: all 0.2s;
+    &:hover{
+        cursor: pointer;
+        background-color: darken(@btn-color, 10%);
+    }
 }
 // Typography
 section{
     padding: 10rem 0;
 }
+.section-header{
+    margin: 2rem 0 10rem;
+    .bold();
+    font-size: 3rem;
+    text-align: center;
+}
+
 // main
 .main{
     padding: 3rem 0 5rem;
-    background: #fff url(../img/bg_main1.jpg) center center no-repeat;
+    background: #fff url(../img/main-bg.jpg) center center no-repeat;
     background-size: cover;
     &-content{
-        margin-top: 14rem;
+        margin-top: 10rem;
         // First title 
         h1{
-            margin-bottom: 5rem;
+            margin-top: 0;
+            margin-bottom: 4rem;
             .bold();
             font-size: 4rem;
             line-height: 1.45;
@@ -76,7 +96,7 @@ section{
         }    }
         // Subtitle
     &-subtitle{
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
         font-size: 2.4rem;
     }
     // Green box
@@ -97,7 +117,7 @@ section{
     &-trigger{
         display: block;
         margin-top: 4rem;
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-transform: uppercase;
         .bold();
         margin-top: 3rem;
@@ -165,12 +185,98 @@ section{
     text-align: right;
 }
 &-link{
-    display: inline-block; 
-    font-weight: 900;
+    display: inline-block;
+    .bold(); 
     font-size: 2rem; 
     height: 7rem;
     line-height: 7rem;
-    .bold();
     color: @text-color;
 }
+}
+
+
+// секция с примуществами
+.features{
+    &-block{
+        text-align: center;
+        h3{
+            .bold();
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        p{
+            display: inline-block;
+            width: 80%;
+            font-size: 1.4rem;
+        }
+    }
+    &-img{
+        height: 8rem ;
+        margin-bottom: 3rem;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+.slick-active{
+    outline: none;
+}
+.arrow{   
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+.prev{
+    left: 0;
+    background: url(../img/left-arrow.svg) center no-repeat;
+    background-size: 70%;
+}
+.next{
+    right: 0;
+    background: url(../img/right-arrow.svg) center no-repeat;
+    background-size: 70%;
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .main{
+        background-position: top right;
+    }
+    .phone-block{
+        text-align: center;
+   
+    }
+    .main-content{
+        margin-top: 3rem;
+    }
+    .main-title{
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 768px) {
+    .main{
+        background-position: top left;
+    }
+    .header{
+        text-align: center;
+    }
+    .wrap-block{
+        text-align: center;
+    }
+    .main-content {
+        margin-top: 15rem;
+    }
+    .main-form {
+        text-align: center;
+    }
 }
