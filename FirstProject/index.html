@@ -130,35 +130,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> -->
    
   <!-- Инициализируем slider-->
-    <script>
-        $(document).ready(function(){
-            $('.features-slider').slick({
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                    breakpoint: 992,
-                    settings: {
-                        prevArrow: '<button class="prev arrow"></button>',
-                        nextArrow: '<button class="next arrow"></button>',
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                    }
-                    },
-                    {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        prevArrow: '<button class="prev arrow"></button>',
-                        nextArrow: '<button class="next arrow"></button>',
-                    }
-                    }
-                ]
-            });
-        });
-    </script>
+    <script src="js/slider.js"></script>
 
 </body>
 </html>
