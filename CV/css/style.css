@@ -220,6 +220,9 @@
                 }
                 
                 .profession-title {
+                    display: flex;
+                    flex-wrap: wrap;
+
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 24px;
@@ -228,6 +231,9 @@
                 }
                 
                 .profession-company {
+                    flex: 0 0 auto;
+                    width: 100%;
+
                     color: #ff6b08;
                 }
                 
