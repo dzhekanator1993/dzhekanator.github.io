@@ -19,25 +19,20 @@
                     background: #fff;
                     display: flex;
                     margin: 0 auto;
-                    border-radius: 28px;
                     box-shadow: 5px 9px 20px rgba(0, 0, 0, 15);
                 }
                 
                 .sidebar {
                     /* text-align: center;*/
                     background: #1e2939;
-                    padding-top: 50px;
+                    padding-top: 20px;
                     padding-bottom: 20px;
                     width: 36%;
                     color: #fff;
-                    border-radius: 28px 0 0 28px;
                 }
                 
                 .flexible-image {
                     max-width: 100%;
-                    padding: 2px;
-                    /*box-shadow: 2px 2px 10px gray;*/
-                    box-sizing: border-box;
                 }
                 
                 .contacts-container {
@@ -59,17 +54,17 @@
                     line-height: 24px;
                     color: #69707b;
                 }
-
-                .contacts-img{
-                    width: 16px;
-                    height: 16px;
-                }
-
+                
                 .contacts-type {
                     font-size: 14px;
                     font-weight: 700;
                     line-height: 24px;
                     margin-right: 10px;
+                }
+                
+                .contacts-img{
+                    width: 16px;
+                    height: 16px;
                 }
                 
                 .tech-skills-container {
@@ -235,6 +230,7 @@
                     width: 100%;
 
                     color: #ff6b08;
+                    
                 }
                 
                 .profession-duties {
@@ -274,7 +270,7 @@
                     min-height: 100vh;
                 }
                 
-                @media screen and (max-width: 850px) {
+                @media screen and (max-width: 750px) {
                     .main {
                         max-width: 300px;
                     }
@@ -284,6 +280,9 @@
                     }
                     .wrapper {
                         display: block;
+                    }
+                    .name {
+                        
                     }
                 }
                 @media screen and (min-width: 300px) {
