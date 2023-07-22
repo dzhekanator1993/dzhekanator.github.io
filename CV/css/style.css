@@ -274,7 +274,7 @@
                     min-height: 100vh;
                 }
                 
-                @media screen and (max-width: 650px) {
+                @media screen and (max-width: 720px) {
                     .main,
                     .sidebar {
                         float: none;
@@ -284,5 +284,14 @@
                     .main,
                     .sidebar {
                         min-height: initial;
+                    }
+                }
+                @media screen and (min-width: 300px) {
+                    .sidebar {
+                        flex: o o auto;
+                        width: 99%;
+                    }
+                    .wrapper {
+                        display: block;
                     }
                 }
