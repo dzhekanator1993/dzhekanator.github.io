@@ -57,7 +57,7 @@
     //timeEl.parentNode.remove() 
     //или так
     timeEl.parentNode.classList.add('hide')
-    board.innerHTML = `<h1>Cчет: <span class="primary">${score}</span> </h1>`
+    board.innerHTML = `<h1>Your score: <span class="primary">${score}</span> </h1>`
  }
 
  function createRandomCircle() {
