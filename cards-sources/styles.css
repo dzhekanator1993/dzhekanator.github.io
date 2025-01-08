@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: #3f3f3f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+
+}
+
+.header{
+  height: 50px;
+  color: white;
+}
+
+.header h1{
+  text-align: center;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide{
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.slide h3{
+  position: absolute;
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0px;
+  opacity: 0;
+}
+
+.slide.active{
+  flex: 10;
+}
+
+.slide.active h3{
+  opacity: 1;
+  transition: opacity 0,3s ease-in 0,4s;
+}
+
+.arrows {
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 99;
+  height: 2rem;
+  width: 97%;
+  border: none;
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+.arrowsLeft {
+  position: absolute;
+  left: 5px; 
+  background-size: 70%;
+}
+.arrowsRight {
+  position: absolute;
+  right: 5px;
+  background-size: 70%;
+}
