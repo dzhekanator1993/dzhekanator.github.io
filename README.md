@@ -6,4 +6,6 @@ My projects
 
 [MyHTML](https://dzhekanator1993.github.io/dzhekanator.github.io/FirstProject/ "MyFirstHTML")
 
-[MyTetris](https://dzhekanator1993.github.io/dzhekanator.github.io/tetris/ "MyFirstJSProject")
+[MyGymPage](https://gym-page-five.vercel.app/ "MyFirstReactJSPages")
+
+[MyTetris (desctop version)](https://dzhekanator1993.github.io/dzhekanator.github.io/tetris/ "MyFirstJSProject")
