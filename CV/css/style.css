@@ -284,12 +284,15 @@
                 }
 
                 .profession {
+                    display: flex;
+                    flex-wrap: wrap;
+
                     height: 13px;
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: 700;
                     line-height: 24px;
-                    margin-top: 5px;
-                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
                 }
 
                 .wrapper,
