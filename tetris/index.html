@@ -9,18 +9,24 @@
 </head>
 <body>
     <div id="game">
-        <button id="start">Start</button>
-        <button id="pause">Pause</button>
-        <div class="game-score">
-            <div>Level:<span id="level">0</span></div>
-            <div>Score:<span id="score">0</span></div>
+        <div class="game-controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
         </div>
-        <!-- 10x20 -->
-        <div class="main"></div>
-        <div class="game-over">
-            <div id="game-over">Game Over</div>
+        <div class="game-info">
+            <div class="game-score">
+              <div>Level: <span id="level">0</span></div>
+              <div>Score: <span id="score">0</span></div>
+            </div>
+            <div id="next-tetro" class="next-tetro"></div>
         </div>
-        <div id="next-tetro"></div>
+        <div class="game-place">
+            <!-- 10x20 поле гри -->
+            <div class="main"></div>
+            <div class="game-over">
+                <div id="game-over">Game Over</div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

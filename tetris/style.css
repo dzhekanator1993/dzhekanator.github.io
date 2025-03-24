@@ -1,72 +1,149 @@
-*{
-    box-sizing: border-box;
-}
-body{
+/* Загальний стиль */
+body {
     margin: 0;
-    background: #e1dc9d;
-    color: #030303;
-    font-family: Arial,Helvetica, sans-serif;
-}
-
-#game{
-    font-size: 25px;
-    padding-top: 10px;
-    width: 320px;
-    margin: auto;
-}
-.main{
-    width: 320px;
-    height: 620px;
-    margin: 10px auto 0;
-    border: 10px solid #030303;
-    font-size: 0;
-}
-.game-score{
-    position: absolute;
-    top: 30px;
-    left: 810px;
-}
-.cell{
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Контейнер для гри */
+  #game {
+    display: flex;
+    flex-direction: row; /* Розташовує елементи в ряд */
+    align-items: flex-start;
+    justify-content: center; /* Центрує гру по горизонталі */
+    gap: 20px; /* Відступ між елементами */
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    border: 2px solid #fff;
+  }
+  
+  /* Стилі для кнопок (ліва частина гри) */
+  .game-controls {
+    display: flex;
+    flex-direction: column; /* Розташовує кнопки по вертикалі */
+    justify-content: flex-start;
+    gap: 10px; /* Відстань між кнопками */
+    padding-right: 20px; /* Відступ від поля гри */
+  }
+  
+  /* Стиль для кнопок */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Стилі для інформації про гру (права частина гри) */
+  .game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  /* Стиль для рівня та рахунку */
+  .game-score {
+    color: white;
+    font-size: 18px;
+  }
+  
+  #level, #score {
+    font-weight: bold;
+  }
+  
+  /* Стилі для поля гри */
+  .game-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Відстань між полем гри та іншими елементами */
+  }
+  
+  /* Основна зона гри */
+  .main {
+    width: 300px; /* Ширина поля гри */
+    height: 600px; /* Висота поля гри */
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 30px); /* 10 стовпців по 30px */
+    grid-template-rows: repeat(20, 30px); /* 20 рядків по 30px */
+  }
+  
+  /* Клітинки поля гри */
+  .cell {
     width: 30px;
     height: 30px;
     border: 1px solid #030303;
     outline: 1px solid #e1dc9d;
     display: inline-block;
-}
-.movingCell{
-    background-color: #030303;
-      
-}
-.fixedCell{
-    background-color: #030303;
-}
-
-#next-tetro{
-    position: absolute;
-    top: 100px;
-    left: 810px;
-    font-size: 0;
-}
-
-#pause{
-    position: absolute;
-    top: 60px;
-    right: 810px;
-    font-size: 15px;
-}
-#start{
-    position: absolute;
-    top: 30px;
-    right: 810px;
-    font-size: 15px;
-}
-#game-over{
-    font-size: 100px;
-    color: red;
-    text-align: center; 
+    background-color: transparent; /* Залишає клітинки порожніми по замовчуванню */
+  }
+  
+  /* Мобільні клітинки */
+  .movingCell {
+    background-color: #030303; /* Колір для поточної фігури */
+  }
+  
+  /* Закріплені клітинки */
+  .fixedCell {
+    background-color: #030303; /* Колір для зафіксованих фігур */
+  }
+  
+  /* Стиль для повідомлення про завершення гри */
+  .game-over {
     display: none;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+/* Стилі для поля наступних фігур */
+.next-tetro {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 1px solid white;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 20px); /* 4 стовпці по 20px для наступної фігури */
+    grid-template-rows: repeat(4, 20px); /* 4 рядки по 20px для наступної фігури */
+    gap: 2px; /* Відступ між клітинками */
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  
+  /* Стиль для клітинок у полі наступних фігур */
+  .next-tetro .cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    background-color: transparent; /* Клітинки прозорі за замовчуванням */
+  }
+  
+  .next-tetro .movingCell {
+    background-color: #030303; /* Колір для поточної фігури в наступних фігурах */
+  }
+  
