@@ -331,3 +331,34 @@
                         min-height: initial;
                     }
                 }
+
+                @media print {
+                  body {
+                    font-size: 12pt;
+                    color: black;
+                    background: white !important;
+                  }
+                
+                  a::after {
+                    content: ""; /* щоб не показувались URL після посилань */
+                  }
+                
+                  nav, footer, .no-print {
+                    display: none; /* приховати непотрібні блоки */
+                  }
+                
+                  .page-break {
+                    page-break-before: always;
+                  }
+                
+                  * {
+                    box-shadow: none !important;
+                    text-shadow: none !important;
+                  }
+                
+                  html, body {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                  }
+                }
