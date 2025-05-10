@@ -6,11 +6,15 @@
   <title>Eugenyi Deshevyi – Frontend Developer</title>
   <style>
     :root {
-      --bg-light: #ffffff;
-      --text-light: #1a1a1a;
-      --bg-dark: #121212;
-      --text-dark: #f5f5f5;
-      --accent: #4f46e5;
+      --bg-light: #f9fafb;
+      --text-light: #1f2937;
+      --bg-dark: #1e1e1e;
+      --text-dark: #e5e7eb;
+      --card-light: #ffffff;
+      --card-dark: #2a2a2a;
+      --accent: #6366f1;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+      --shadow-dark: rgba(0, 0, 0, 0.5);
     }
 
     [data-theme="dark"] {
@@ -18,9 +22,19 @@
       color: var(--text-dark);
     }
 
+    [data-theme="dark"] .card {
+      background-color: var(--card-dark);
+      box-shadow: 0 4px 12px var(--shadow-dark);
+    }
+
     [data-theme="light"] {
       background-color: var(--bg-light);
       color: var(--text-light);
+    }
+
+    [data-theme="light"] .card {
+      background-color: var(--card-light);
+      box-shadow: 0 4px 12px var(--shadow-light);
     }
 
     body {
@@ -34,6 +48,12 @@
       max-width: 800px;
       margin: auto;
       padding: 2rem;
+    }
+
+    .card {
+      border-radius: 16px;
+      padding: 2rem;
+      transition: background-color 0.3s, box-shadow 0.3s;
     }
 
     header h1 {
@@ -85,10 +105,11 @@
       background: var(--accent);
       color: white;
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.3rem 0.7rem;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
@@ -105,8 +126,8 @@
       }
 
       .theme-toggle {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -126,63 +147,65 @@
   </script>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <button class="theme-toggle" onclick="toggleTheme()">☀ / 🌙</button>
   <main class="container">
-    <header>
-      <h1>Eugenyi Deshevyi</h1>
-      <h2>Junior Frontend Developer</h2>
-      <div class="contact">
-        <a href="mailto:dzhekanator1993@gmail.com">dzhekanator1993@gmail.com</a> |
-        <a href="https://github.com/dzhekanator1993" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/eugeniy-desheviy-885185362" target="_blank">LinkedIn</a> |
-        Kryvyi Rih, Ukraine
-      </div>
-    </header>
+    <div class="card">
+      <header>
+        <h1>Eugenyi Deshevyi</h1>
+        <h2>Junior Frontend Developer</h2>
+        <div class="contact">
+          <a href="mailto:dzhekanator1993@gmail.com">dzhekanator1993@gmail.com</a> |
+          <a href="https://github.com/dzhekanator1993" target="_blank">GitHub</a> |
+          <a href="https://linkedin.com/in/eugeniy-desheviy-885185362" target="_blank">LinkedIn</a> |
+          Kryvyi Rih, Ukraine
+        </div>
+      </header>
 
-    <section>
-      <h3>About Me</h3>
-      <p>
-        I'm a Junior Frontend Developer with a background in economics and pedagogy, passionate about building user-friendly and interactive interfaces. I’ve independently learned modern web technologies and developed several pet projects using React, JavaScript, and REST APIs. I am looking for a team where I can contribute, grow, and gain real-world experience while focusing on quality and clean code.
-      </p>
-    </section>
+      <section>
+        <h3>About Me</h3>
+        <p>
+          I'm a Junior Frontend Developer with a background in economics and pedagogy, passionate about building user-friendly and interactive interfaces. I’ve independently learned modern web technologies and developed several pet projects using React, JavaScript, and REST APIs. I am looking for a team where I can contribute, grow, and gain real-world experience while focusing on quality and clean code.
+        </p>
+      </section>
 
-    <section>
-      <h3>Tech Stack</h3>
-      <ul class="stack">
-        <li>HTML5</li><li>CSS3 / SASS</li><li>JavaScript</li><li>ReactJS</li><li>Git & GitHub</li>
-        <li>REST API</li><li>Node.js (Express)</li><li>Figma</li><li>Scrum / Kanban</li>
-      </ul>
-    </section>
+      <section>
+        <h3>Tech Stack</h3>
+        <ul class="stack">
+          <li>HTML5</li><li>CSS3 / SASS</li><li>JavaScript</li><li>ReactJS</li><li>Git & GitHub</li>
+          <li>REST API</li><li>Node.js (Express)</li><li>Figma</li><li>Scrum / Kanban</li>
+        </ul>
+      </section>
 
-    <section>
-      <h3>Projects</h3>
-      <ul>
-        <li><strong>GymPage</strong> – A responsive fitness landing page with interactive UI. [<a href="https://gym-page-five.vercel.app/" target="_blank">Live</a>]</li>
-        <li><strong>CryptoTrack</strong> – Real-time cryptocurrency tracker using public APIs. [<a href="https://crypto-app-react-olive.vercel.app/" target="_blank">Live</a>]</li>
-        <li><strong>WickPortfolio</strong> – Animated single-page portfolio made with Framer. [<a href="https://johnwick.framer.website/" target="_blank">Live</a>]</li>
-        <li><strong>JS Mini Games</strong> – Memory, drag-n-drop, aim trainer, Tetris, and more. [<a href="https://dzhekanator1993.github.io/dzhekanator.github.io/" target="_blank">See all</a>]</li>
-      </ul>
-    </section>
+      <section>
+        <h3>Projects</h3>
+        <ul>
+          <li><strong>GymPage</strong> – A responsive fitness landing page with interactive UI. [<a href="https://gym-page-five.vercel.app/" target="_blank">Live</a>]</li>
+          <li><strong>CryptoTrack</strong> – Real-time cryptocurrency tracker using public APIs. [<a href="https://crypto-app-react-olive.vercel.app/" target="_blank">Live</a>]</li>
+          <li><strong>WickPortfolio</strong> – Animated single-page portfolio made with Framer. [<a href="https://johnwick.framer.website/" target="_blank">Live</a>]</li>
+          <li><strong>JS Mini Games</strong> – Memory, drag-n-drop, aim trainer, Tetris, and more. [<a href="https://dzhekanator1993.github.io/dzhekanator.github.io/" target="_blank">See all</a>]</li>
+        </ul>
+      </section>
 
-    <section>
-      <h3>Education</h3>
-      <ul>
-        <li>Kryvyi Rih National University – Business Economics (2011–2015)</li>
-        <li>Kryvyi Rih State Pedagogical University – Socially Pedagogical Sciences (2023–2024)</li>
-      </ul>
-    </section>
+      <section>
+        <h3>Education</h3>
+        <ul>
+          <li>Kryvyi Rih National University – Business Economics (2011–2015)</li>
+          <li>Kryvyi Rih State Pedagogical University – Socially Pedagogical Sciences (2023–2024)</li>
+        </ul>
+      </section>
 
-    <section>
-      <h3>Soft Skills</h3>
-      <ul class="stack">
-        <li>Team Player</li><li>Fast Learner</li><li>Self-Organized</li><li>Problem Solving</li><li>Responsible</li><li>Stress Resistant</li>
-      </ul>
-    </section>
+      <section>
+        <h3>Soft Skills</h3>
+        <ul class="stack">
+          <li>Team Player</li><li>Fast Learner</li><li>Self-Organized</li><li>Problem Solving</li><li>Responsible</li><li>Stress Resistant</li>
+        </ul>
+      </section>
 
-    <section>
-      <h3>Languages</h3>
-      <p>Ukrainian – Native | English – Pre-Intermediate (A2)</p>
-    </section>
+      <section>
+        <h3>Languages</h3>
+        <p>Ukrainian – Native | English – Pre-Intermediate (A2)</p>
+      </section>
+    </div>
   </main>
 </body>
 </html>
